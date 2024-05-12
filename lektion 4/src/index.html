@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="./main.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <form id="batmanForm">
-        <input id='batmanScore'type="number">
-        <button>update batman score</button>
-    </form>
-<form id="addUser">
-    <input id="newUserName" type="text" placeholder="name">
-    <input id ="newUserScore" type="number" placeholder="100">
-    <button>add user</button>
-</form>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./main.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="batmanForm">
+            <input id="batmanScore" type="number" />
+            <button>update batman score</button>
+        </form>
+        <form id="addUser">
+            <input id="newUserName" type="text" placeholder="name" />
+            <input id="newUserScore" type="number" placeholder="100" />
+            <button>add user</button>
+        </form>
 
-    <div id="usersContainer"></div>
-   
-    
-</body>
+        <form id="writeMessage">
+            <input id="newChatMessage" type="text" placeholder="new chat-message">
+            <select id="selectUser"></select>
+            <button type="submit">Skicka</button>
+        </form>
+
+        <div id="usersContainer"></div>
+        <div id="messagesContainer"></div>
+    </body>
 </html>
