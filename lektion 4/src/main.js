@@ -8,6 +8,7 @@ onValue(usersRef, (snapshot) => {
     displayUsers(users);
 
     const selectUser = document.querySelector("#selectUser");
+    selectUser.innerHTML="";
     for (const key in users) {
         const user = users[key];
         const option = document.createElement("option");
