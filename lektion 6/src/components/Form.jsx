@@ -2,18 +2,26 @@ import { useState } from "react";
 
 function Form() {
 
-    const [text, setText] = useState('Första texten')
+    
+    const [textArr, setTextArr] = useState([])
 
     let tempText = '';
 
     function handleChange(event){
         tempText = event.target.value;
-        // console.log(tempText);
+        //  console.log(tempText);
     }
 
     function handleSubmit(event){
         event.preventDefault();
-        setText(tempText);
+        event.target.reset();
+
+        const textArrClone = [...textArr]
+
+        textArrClone.push(tempText);
+        setTextArr(textArrClone);
+        console.log(textArrClone);
+  
     }
 
 
@@ -23,7 +31,8 @@ function Form() {
                 <input onChange={handleChange} type="text" />
                 <button>ChangeText</button>
             </form>
-            <h1>{text}</h1>
+            {textArr.map(text => <h1>{text}</h1>)}
+            
 
 
         </div>
