@@ -1,17 +1,24 @@
+import { useState } from "react";
+
 function Button() {
-    let cssColor = "bg-blue";
+    // let cssColor = "bg-blue";
+
+    const [cssColor, setCssColor] = useState("bg-blue");
+
+    const [counter, setCounter] = useState(0);
 
     function handleClick(event) {
+        setCounter(counter + 1);
         console.log(event.target);
     }
 
     function handleEnter() {
-        cssColor = "bg-pink";
-        console.log('enter', cssColor);
+        setCssColor("bg-pink");
+        console.log("enter", cssColor);
     }
     function handleLeave() {
-        cssColor = "bg-blue";
-        console.log('enter', cssColor);
+        setCssColor("bg-blue");
+        console.log("leave", cssColor);
     }
 
     return (
@@ -21,7 +28,7 @@ function Button() {
             onMouseLeave={handleLeave}
             className={cssColor}
         >
-            Klicka mig!
+            {counter}
         </button>
     );
 }
