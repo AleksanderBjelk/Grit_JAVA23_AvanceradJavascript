@@ -4,6 +4,7 @@ import Error from "./Error";
 import { users } from "../utils/users";
 import User from "./user";
 import Timer from "./Timer";
+import Dog from "./Dog";
 
 export function App() {
 
@@ -12,6 +13,7 @@ export function App() {
     return (
  
         <>
+        <Dog/>
         <Timer/>
             <main>
                 {status === 'loading' && <Loading/>}
