@@ -1,12 +1,19 @@
-export function App() {
-    return (
-        <div>
-            <h1>App</h1>
-        </div>
+import Loading from "./Loading";
+import Result from "./Result";
+import Error from "./Error";
 
-        // <>
-        // <h1>App</h1>
-        // <p>test</p>
-        // </>
+export function App() {
+
+    const status = 'result'
+
+    return (
+ 
+        <>
+            <main>
+                {status === 'loading' && <Loading/>}
+                {status === 'error' && <Error/>}
+                {status === 'result' && <Result/>}
+            </main>
+        </>
     );
 }
