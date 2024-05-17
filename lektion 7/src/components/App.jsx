@@ -3,6 +3,7 @@ import Result from "./Result";
 import Error from "./Error";
 import { users } from "../utils/users";
 import User from "./user";
+import Timer from "./Timer";
 
 export function App() {
 
@@ -11,6 +12,7 @@ export function App() {
     return (
  
         <>
+        <Timer/>
             <main>
                 {status === 'loading' && <Loading/>}
                 {status === 'error' && <Error/>}
