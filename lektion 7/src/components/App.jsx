@@ -1,6 +1,8 @@
 import Loading from "./Loading";
 import Result from "./Result";
 import Error from "./Error";
+import { users } from "../utils/users";
+import User from "./user";
 
 export function App() {
 
@@ -14,6 +16,8 @@ export function App() {
                 {status === 'error' && <Error/>}
                 {status === 'result' && <Result/>}
             </main>
+
+            {users.map( ({name, id}) => <User name={name} key={id}/>)}
         </>
     );
 }
