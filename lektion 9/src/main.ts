@@ -15,3 +15,14 @@ arr2.push(4);
 // let arr2: [] = [];
 // arr2.push(4, 'hej',3,'fem');
 console.log(arr2);
+
+function add(x:number, y:number):number{
+    return x+y;
+}
+
+add(1,2);
+
+function higherOrderFunc(func:Function):void{
+    func();
+}
+
