@@ -80,3 +80,14 @@ const obj:ObjWMult = {
     },
     age: 56
 }
+
+//OM and typecasting
+const h1El = document.querySelector('h1') as HTMLHeadElement;
+h1El.innerText = 'Ny rubrik'
+
+
+const form = document.querySelector('#formEl') as HTMLFormElement;
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    form.reset();
+})
