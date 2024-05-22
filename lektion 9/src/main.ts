@@ -6,14 +6,14 @@ console.log(word);
 
 let arr: number[] = [45, 32];
 
-// let arr2: [number,number,number] = [1,2,3];
+let arr2: [number,number,number] = [1,2,3];
 
-// arr2[3] = 4;
+arr2[3] = 4;
 
-// arr2.push(4);
+arr2.push(4);
 
-let arr2: [] = [];
-arr2.push(4, 'hej',3,'fem');
+// let arr2: [] = [];
+// arr2.push(4, 'hej',3,'fem');
 console.log(arr2);
 
 function add(x:number, y:number):number{
@@ -60,3 +60,23 @@ console.log(person1.name, person1.isSleepy);
 type Group = Person [];
 
 const group:Group = [person1, person1, 324]
+
+type Coin = 'krona' | 'klave';
+
+let mynt:Coin = 'krona';
+
+type Combined = '56'|56|boolean;
+const comb = true;
+
+type Mult = (x:number, y:number) => number;
+type ObjWMult = {
+    meth: Mult,
+    age: 56
+}
+
+const obj:ObjWMult = {
+    meth(x,y){
+        return x*y;
+    },
+    age: 56
+}
